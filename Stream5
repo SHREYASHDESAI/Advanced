@@ -1,0 +1,15 @@
+//print strings that begin with "a" and end with "c"
+//in lexicographic order
+
+import java.util.Arrays;
+
+public class Stream5 {
+    public static void main(String[] args){
+        String []arr = {"azc","cde","acd","aec","xyz"};
+        Arrays.stream(arr)
+                .filter(x -> x.startsWith("a"))
+                .filter(x -> x.endsWith("c"))
+                .sorted()
+                .forEach(System.out::println);
+    }
+}
