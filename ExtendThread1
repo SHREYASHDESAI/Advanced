@@ -1,0 +1,15 @@
+class Test1 extends Thread
+{
+    public void run()
+    {
+        System.out.println("Inside Test1 Thread");
+    }
+}
+
+public class ExtendThread1 {
+    public static void main(String[] args){
+        Test1 t = new Test1();
+        t.start();
+        System.out.println("Inside ExtendThread1 Thread");
+    }
+}
