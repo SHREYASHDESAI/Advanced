@@ -1,0 +1,21 @@
+class Test2 extends Thread
+{
+    public void run()
+    {
+        for(int i =0;i <5;i++)
+        {
+            System.out.println("Inside Test2 Thread");
+        }
+    }
+}
+public class ExtendThread2 {
+    public static void main(String[] args) throws InterruptedException {
+        Test2 t = new Test2();
+        t.start();
+        for(int i =0;i <5;i++)
+        {
+            System.out.println("Inside ExtendThread2 Thread");
+            Thread.sleep(1); //makes thread sleep for 1 millisecond
+        }
+    }
+}
