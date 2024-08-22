@@ -1,0 +1,16 @@
+class Test implements Runnable
+{
+    public void run()
+    {
+        System.out.println("In Test Thread");
+    }
+}
+
+public class ImplementRunnableInterface {
+    public static void main(String[] args)
+    {
+        Thread t = new Thread(new Test());
+        t.start();
+        System.out.println("In ImplementRunnableInterface Thread");
+    }
+}
