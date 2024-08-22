@@ -1,0 +1,13 @@
+//print first natural numbers with given digit d
+//here we took n = 10, d = 5; can use scanner
+
+import java.util.stream.Stream;
+
+public class Stream4 {
+    public static void main(String[] args){
+        Stream.iterate(1, x -> x +1)
+                .filter(x -> x.toString().contains("5"))
+                .limit(10)
+                .forEach(System.out::println);
+    }
+}
